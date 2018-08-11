@@ -125,6 +125,16 @@
 					<label>$LOCALIZE[5]</label>
 					<onclick>ActivateWindow(settings)</onclick>
 				</control>
+                <!--reboot nand-->
+                <control type="button" id="514">
+                    <width>1664</width>
+                    <label>$LOCALIZE[13013] $LOCALIZE[19156] Nand</label>
+                    <onclick>Dialog.Close(all,true)</onclick>
+                    <onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
+                    <onclick>SetProperty(IsExiting,true,Home)</onclick>
+                    <onclick>AlarmClock(ExitTimer,Reset(),0:03,silent)</onclick>
+                    <!-- <visible>System.Platform.Android</visible> -->
+                </control>
 			</control>
 		</control>
 	</controls>
