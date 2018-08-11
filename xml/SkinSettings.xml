@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">5500</defaultcontrol>
 	<menucontrol>7000</menucontrol>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
+	<onunload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=main:hsv*0.0;0.0;0.0|var=comp,set=main:hsv*0.0;-0.2;0.2|var=quality,set=$INFO[Skin.String(fx.quality)]|var=blursize,set=$INFO[Skin.String(fx.blursize)]|var=bitsize,set=$INFO[Skin.String(fx.bitsize)]|var=pixelsize,se​​t=$INFO[Skin.String(fx.pixelsize)]|var=blend,set=$INFO[Skin.String(colorbox_blend)]|var=black,set=$INFO[Skin.String(fx.black)]|var=white,set=$INFO[Skin.String(fx.white)]",home),00:05,true)</onunload>
 
 	<controls>
 
@@ -34,7 +35,7 @@
 				<top>0</top>
 				<width>384</width>
 				<height>810</height>
-				<onleft>10000</onleft>
+				<onleft>7000</onleft>
 				<onright>9002</onright>
 				<onup>9001</onup>
 				<ondown>9001</ondown>
@@ -54,7 +55,7 @@
 						<width>384</width>
 						<height>90</height>
 						<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
-						<animation effect="fade" time="0" start="100" end="25" condition="ControlGroup(9002).HasFocus()">Conditional</animation>
+						<animation effect="fade" time="0" start="100" end="25" condition="ControlGroup(9002).HasFocus() | Control.HasFocus(6500)">Conditional</animation>
 					</control>
 					<control type="label">
 						<width>384</width>
@@ -117,6 +118,7 @@
 
 			<control type="group" id="9002">
 				<left>448</left>
+				<top>0</top>
 
 				<!-- General -->                    
 				<control type="grouplist" id="9105">
@@ -276,6 +278,16 @@
 						<include>radio_Settings</include>
 						<visible>String.IsEqual(Skin.String(homemenu.layout),horizontal)</visible>
 					</control>
+
+					<!-- Hide submenu until focused -->
+					<control type="radiobutton" id="9223">
+						<label>Hide submenu until focused</label>
+						<onclick>Skin.ToggleSetting(homemenu.hidesub)</onclick>
+						<selected>Skin.HasSetting(homemenu.hidesub)</selected>
+						<include>radio_Settings</include>
+						<visible>String.IsEqual(Skin.String(homemenu.layout),horizontal)</visible>
+					</control>
+
 					<!-- Toggle widget names -->
 					<control type="radiobutton" id="9240">
 						<label>$LOCALIZE[31040]</label>
@@ -334,6 +346,14 @@
 						<selected>Skin.HasSetting(context.trailer)</selected>
 						<include>radio_Settings</include>
 					</control>
+
+					<!-- Trailer -->
+					<control type="radiobutton" id="343">
+						<label>test</label>
+						<onclick>Skin.ToggleSetting(foo)</onclick>
+						<selected>Skin.HasSetting(foo)</selected>
+						<include>radio_Settings</include>
+					</control>
 				</control>
 
 
@@ -357,10 +377,20 @@
 
 					<!-- Include library shortcuts -->
 					<control type="radiobutton" id="9320">
-						<label>Include library shortcuts</label>
+						<label>$LOCALIZE[31390]</label>
 						<onclick>Skin.ToggleSetting(hub.defaultnodes)</onclick>
-						<selected>!Skin.HasSetting(hub.defaultnodes)</selected>
+						<selected>Skin.HasSetting(hub.defaultnodes)</selected>
 						<include>radio_Settings</include>
+					</control>
+
+					<!-- Library shortcuts placement -->
+					<control type="button" id="9321">
+						<label>$LOCALIZE[31391]</label>
+						<label2>$INFO[Skin.String(hub.defaultnodes.position)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.defaultnodes.position,header=$LOCALIZE[31391])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+						<visible>Skin.HasSetting(hub.defaultnodes)</visible>
 					</control>
 			
 				</control>
@@ -390,6 +420,13 @@
 						<label2>$INFO[Skin.String(background.home.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.home,header=$LOCALIZE[31360])</onclick>
 						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+					<!-- Background rotation interval -->
+					<control type="button" id="9412">
+						<label>$LOCALIZE[31389]</label>
+						<label2>$INFO[Skin.String(slideshow.home.refresh)]</label2>
+						<onclick>Skin.SetNumeric(slideshow.home.refresh)</onclick>
 						<include>button_Settings</include>
 					</control>
 					<!-- Custom image(s) select -->
@@ -472,9 +509,9 @@
 					<!-- Download artwork -->
 					<control type="button" id="9445">
 						<label>$LOCALIZE[31206]</label>
-						<onclick condition="System.HasAddon(script.artwork.downloader)">ActivateWindow(1103)</onclick>
-						<include>install_Downloader</include>
+						<onclick condition="System.HasAddon(script.artwork.beef)">ActivateWindow(1103)</onclick>
 						<include>button_Settings</include>
+						<visible>System.HasAddon(script.artwork.beef)</visible>
 					</control>
 
 					<!-- PVR-->
@@ -703,7 +740,7 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.main)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>9696</onup>
+							<onup>9697</onup>
 							<ondown>9660</ondown>
 						</control>
 						<control type="image">
@@ -791,7 +828,7 @@
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
 							<onup>9680</onup>
-							<ondown>9696</ondown>
+							<ondown>9693</ondown>
 						</control>
 						<control type="image">
 							<right>0</right>
@@ -800,6 +837,20 @@
 							<texture colordiffuse="$VAR[color:Disabled]">colorize/100.png</texture>
 							<bordersize>8</bordersize>
 							<aspectratio>stretch</aspectratio>
+						</control>
+					</control>
+
+					<!-- PVR Genre colours-->
+					<control type="group" id="9693">
+						<height>90</height>
+						<control type="radiobutton" id="9694">
+							<label>$LOCALIZE[31392]</label>
+							<onleft>9001</onleft>
+							<onclick>Skin.ToggleSetting(genrecolours.disable)</onclick>
+							<selected>Skin.HasSetting(genrecolours.disable)</selected>
+							<include>radio_Settings</include>
+							<onup>9691</onup>
+							<ondown>9696</ondown>
 						</control>
 					</control>
 
@@ -819,7 +870,7 @@
 							<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=colorthemes)</onclick>
 							<include>install_HelperService</include>
 							<include>radio_Settings</include>
-							<onup>9690</onup>
+							<onup>9693</onup>
 							<ondown>9697</ondown>
 						</control>
 					</control>
@@ -838,7 +889,7 @@
 							<onup>9696</onup>
 							<ondown>9650</ondown>
 						</control>
-					</control>		
+					</control>
 				</control>
 
 			
@@ -962,7 +1013,7 @@
 						</control>
 						<control type="group">
 							<width>1216</width>
-							<visible>!Control.HasFocus(9700)</visible>
+							<visible>!Control.HasFocus(9800)</visible>
 							<include content="view_List-Layout">
 								<param name="ShowArt">true</param>
 								<param name="ShowSymbol">String.IsEmpty(ListItem.Icon)</param>
@@ -1028,13 +1079,6 @@
 							<icon>$INFO[System.AddonIcon(script.artistslideshow)]</icon>
 							<onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
 							<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
-						</item>
-						<item>
-							<label>Artwork Downloader</label>
-							<label2>$INFO[System.AddonVersion(script.artwork.downloader),, &#8226; $LOCALIZE[31071]]</label2>
-							<icon>$INFO[System.AddonIcon(script.artwork.downloader)]</icon>
-							<onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
-							<include>install_Downloader</include>
 						</item>
 						<item>
 							<label>AutoCompletion for virtual keyboard</label>

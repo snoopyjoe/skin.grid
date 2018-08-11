@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.grid.leia" version="2.1.1" name="Grid Beta" provider-name="Jeroen">
+<addon id="skin.grid" version="2.3.5" name="Grid" provider-name="Jeroen">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0"/>
-		<import addon="script.grab.fanart" version="0.14.1"/>
 		<import addon="resource.uisounds.grid" version="0.0.1"/>
+		<import addon="script.grab.fanart" version="0.14.1"/>
 		<import addon="script.skin.helper.service" version="1.0.11"/>
 		<import addon="script.skinshortcuts" version="1.0.11"/>
 		<import addon="script.watchlist" version="0.0.1"/>

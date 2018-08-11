@@ -24,7 +24,7 @@ Any redistribution of this software (or modifications / derivatives of it) must 
 
 <a name="Compatibility"></a>
 ## Compatibility
-Currently Grid is compatible with Kodi 17 Krypton only. A branch is available for Kodi 18 Leia, but it is to be considered incomplete and unstable. Please do not report issues encountered on the Kodi 18 Leia version.
+Currently Grid is compatible with Kodi 17 Krypton and Kodi 18 Leia.
 
 <a name="Language"></a>
 ## Language support
@@ -73,7 +73,6 @@ These add-ons are required by Grid. If you are missing one or more, Kodi will di
 If you are using an official public release of Grid, these add-ons should be installed automatically by Kodi If you are manually installing Grid from Github, you may need to install one or more of these add-ons. Below is where you can find them.
 
 * [resource.uisounds.grid](https://github.com/jeroenpardon/resource.uisounds.grid)
-* [script.grab.fanart](https://github.com/robweber/script.grab.fanart)
 * [script.skin.helper.service](https://github.com/marcelveldt/script.skin.helper.service)
 * [script.skin.helper.widgets](https://github.com/marcelveldt/script.skin.helper.widgets)
 * [script.skinshortcuts](https://github.com/BigNoid/script.skinshortcuts)
@@ -83,7 +82,6 @@ If you are using an official public release of Grid, these add-ons should be ins
 These add-ons are not required for installation but are needed for certain skin features. You will be prompted to install an add-on when you select such a feature.
 
 * [script.artistslideshow](https://github.com/pkscout/script.artistslideshow)
-* [script.artwork.downloader](https://github.com/XBMC-Addons/script.artwork.downloader)
 * [script.cinemavision](https://github.com/CinemaVision/script.cinemavision)
 * [script.colorbox](https://github.com/BADMS/script.colorbox)
 * [script.skin.helper.colorpicker](https://github.com/marcelveldt/script.skin.helper.colorpicker)
@@ -96,6 +94,10 @@ These add-ons are not required for installation but are needed for certain skin 
 Even though I enjoy working on Grid greatly, a lot of time and effort is invested in it's development. If you enjoy my work and would like to buy me a beer to show your appreciation, any donation is appreciated greatly.
 
 [![Image](https://www.paypalobjects.com/images/shared/paypal-logo-129x32.svg "Donate Link") ](http://bit.ly/2nXuTGN "Grid donation button")
+
+Bitcoin: 13vDGFQEyMDgZip1J7MaSdsVY4obijvsns
+
+Ethereum: 0xBa1fd6a4c455a5ec4483E00732183C7b861361fB
 
 <a name="Credits"></a>
 ## Credits

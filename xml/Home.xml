@@ -6,6 +6,10 @@
 
 	<onload condition="!Skin.HasSetting(SetupDone)">ReplaceWindow(1106)</onload>
 
+	<!-- Fanart grabber -->
+	<onload condition="String.IsEmpty(Skin.String(slideshow.home.refresh))">RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(slideshow.home.refresh))">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(slideshow.home.refresh)])</onload>
+
 	<!-- Artist Slideshow -->
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 
@@ -76,5 +80,6 @@
 				<visible>String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))</visible>
 			</control>
 		</control>
+
 	</controls>
 </window>

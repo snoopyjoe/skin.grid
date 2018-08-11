@@ -75,6 +75,7 @@
 	<!-- TV Shows hub -->
 	<setting id="hub.shows.1" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.shows.1" value="watchlist" label="$LOCALIZE[31712]" default="true"/>
+	<setting id="hub.shows.1" value="inprogress" label="$LOCALIZE[626]"/>
 	<setting id="hub.shows.1" value="recent" label="$LOCALIZE[31665]"/>
 	<setting id="hub.shows.1" value="unwatched" label="$LOCALIZE[16101]"/>
 	<setting id="hub.shows.1" value="all" label="$LOCALIZE[31673]"/>
@@ -84,6 +85,7 @@
 
 	<setting id="hub.shows.2" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.shows.2" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.2" value="inprogress" label="$LOCALIZE[626]"/>
 	<setting id="hub.shows.2" value="recent" label="$LOCALIZE[31665]" default="true"/>
 	<setting id="hub.shows.2" value="unwatched" label="$LOCALIZE[16101]"/>
 	<setting id="hub.shows.2" value="all" label="$LOCALIZE[31673]"/>
@@ -93,6 +95,7 @@
 
 	<setting id="hub.shows.3" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.shows.3" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.3" value="inprogress" label="$LOCALIZE[626]"/>
 	<setting id="hub.shows.3" value="recent" label="$LOCALIZE[31665]"/>
 	<setting id="hub.shows.3" value="unwatched" label="$LOCALIZE[16101]" default="true"/>
 	<setting id="hub.shows.3" value="all" label="$LOCALIZE[31673]"/>
@@ -100,8 +103,9 @@
 	<setting id="hub.shows.3" value="onair" label="$ADDON[script.extendedinfo 32039]"/>
 	<setting id="hub.shows.3" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
 
-	<setting id="hub.shows.3" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.4" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.shows.4" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.4" value="inprogress" label="$LOCALIZE[626]"/>
 	<setting id="hub.shows.4" value="recent" label="$LOCALIZE[31665]"/>
 	<setting id="hub.shows.4" value="unwatched" label="$LOCALIZE[16101]"/>
 	<setting id="hub.shows.4" value="all" label="$LOCALIZE[31673]" default="true"/>
@@ -111,6 +115,7 @@
 
 	<setting id="hub.shows.5" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.shows.5" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.5" value="inprogress" label="$LOCALIZE[626]"/>
 	<setting id="hub.shows.5" value="recent" label="$LOCALIZE[31665]"/>
 	<setting id="hub.shows.5" value="unwatched" label="$LOCALIZE[16101]"/>
 	<setting id="hub.shows.5" value="all" label="$LOCALIZE[31673]"/>
@@ -120,6 +125,7 @@
 
 	<setting id="hub.shows.6" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.shows.6" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.6" value="inprogress" label="$LOCALIZE[626]"/>
 	<setting id="hub.shows.6" value="recent" label="$LOCALIZE[31665]"/>
 	<setting id="hub.shows.6" value="unwatched" label="$LOCALIZE[16101]"/>
 	<setting id="hub.shows.6" value="all" label="$LOCALIZE[31673]"/>
@@ -129,6 +135,7 @@
 
 	<setting id="hub.shows.7" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.shows.7" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.7" value="inprogress" label="$LOCALIZE[626]"/>
 	<setting id="hub.shows.7" value="recent" label="$LOCALIZE[31665]"/>
 	<setting id="hub.shows.7" value="unwatched" label="$LOCALIZE[16101]"/>
 	<setting id="hub.shows.7" value="all" label="$LOCALIZE[31673]"/>
@@ -137,7 +144,7 @@
 	<setting id="hub.shows.7" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
 
 
-	<!-- Music hub -->31662
+	<!-- Music hub -->
 	<setting id="hub.music.1" value="none" label="$LOCALIZE[13113]"/>
 	<setting id="hub.music.1" value="played" label="$LOCALIZE[31714]" default="true"/>
 	<setting id="hub.music.1" value="recent" label="$LOCALIZE[31665]"/>
@@ -193,7 +200,68 @@
 	<setting id="hub.music.7" value="random" label="$LOCALIZE[31715]"/>
 	<setting id="hub.music.7" value="randomsongs" label="$LOCALIZE[31663]" default="true"/>
 	<setting id="hub.music.7" value="artists" label="$LOCALIZE[133]"/>
+
+	<!-- Addons hub -->
+	<setting id="hub.addons.1" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.addons.1" value="video" label="video" default="true"/>
+	<setting id="hub.addons.1" value="music" label="music"/>
+	<setting id="hub.addons.1" value="pictures" label="pictures"/>
+	<setting id="hub.addons.1" value="programs" label="programs"/>
+	<setting id="hub.addons.1" value="games" label="games"/>
+	<setting id="hub.addons.1" value="recent" label="recent"/>
+
+	<setting id="hub.addons.2" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.addons.2" value="video" label="video" default="true"/>
+	<setting id="hub.addons.2" value="music" label="music"/>
+	<setting id="hub.addons.2" value="pictures" label="pictures"/>
+	<setting id="hub.addons.2" value="programs" label="programs"/>
+	<setting id="hub.addons.2" value="games" label="games"/>
+	<setting id="hub.addons.2" value="recent" label="recent"/>
+
+	<setting id="hub.addons.3" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.addons.3" value="video" label="video" default="true"/>
+	<setting id="hub.addons.3" value="music" label="music"/>
+	<setting id="hub.addons.3" value="pictures" label="pictures"/>
+	<setting id="hub.addons.3" value="programs" label="programs"/>
+	<setting id="hub.addons.3" value="games" label="games"/>
+	<setting id="hub.addons.3" value="recent" label="recent"/>
+
+	<setting id="hub.addons.4" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.addons.4" value="video" label="video" default="true"/>
+	<setting id="hub.addons.4" value="music" label="music"/>
+	<setting id="hub.addons.4" value="pictures" label="pictures"/>
+	<setting id="hub.addons.4" value="programs" label="programs"/>
+	<setting id="hub.addons.4" value="games" label="games"/>
+	<setting id="hub.addons.4" value="recent" label="recent"/>
+
+	<setting id="hub.addons.5" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.addons.5" value="video" label="video" default="true"/>
+	<setting id="hub.addons.5" value="music" label="music"/>
+	<setting id="hub.addons.5" value="pictures" label="pictures"/>
+	<setting id="hub.addons.5" value="programs" label="programs"/>
+	<setting id="hub.addons.5" value="games" label="games"/>
+	<setting id="hub.addons.5" value="recent" label="recent"/>
+
+	<setting id="hub.addons.6" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.addons.6" value="video" label="video" default="true"/>
+	<setting id="hub.addons.6" value="music" label="music"/>
+	<setting id="hub.addons.6" value="pictures" label="pictures"/>
+	<setting id="hub.addons.6" value="programs" label="programs"/>
+	<setting id="hub.addons.6" value="games" label="games"/>
+	<setting id="hub.addons.6" value="recent" label="recent"/>
+
+	<setting id="hub.addons.7" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.addons.7" value="video" label="video" default="true"/>
+	<setting id="hub.addons.7" value="music" label="music"/>
+	<setting id="hub.addons.7" value="pictures" label="pictures"/>
+	<setting id="hub.addons.7" value="programs" label="programs"/>
+	<setting id="hub.addons.7" value="games" label="games"/>
+	<setting id="hub.addons.7" value="recent" label="recent"/>
 	
+
+	<setting id="hub.defaultnodes.position" value="top" label="$LOCALIZE[31089]" default="true"/>
+	<setting id="hub.defaultnodes.position" value="bottom" label="$LOCALIZE[31090]"/>
+
 
 	<!-- Home menu layout -->
 	<setting id="homemenu.layout" value="vertical" label="$LOCALIZE[31058]" default="true">
